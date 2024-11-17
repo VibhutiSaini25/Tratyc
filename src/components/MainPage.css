@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+#navbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: hwb(7 26% 71%); /* Navbar background color */
+    position: relative;
+}
+
+.logo {
+    padding: 5px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+#navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: rgb(17, 11, 11);
+    background-color: rgb(241, 243, 233);
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    opacity: 0.5;
+    background: url("/public/mainpage.png") no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+/* Row Background Animation */
+.row {
+    background-color: hsl(0, 61%, 82%);
+    margin-top: 0px;
+    padding: 20px;
+    animation: backgroundPulse 2s infinite;
+}
+
+@keyframes backgroundPulse {
+    0% {
+        background-color: hsl(0, 61%, 82%);
+    }
+    50% {
+        background-color: hsl(11, 65%, 73%);
+    }
+    100% {
+        background-color: rgb(222, 120, 120);
+    }
+}
+
+h1 {
+    color: hwb(0 0% 100%);
+    text-align: center;
+}
+
+#home h3 {
+    color: rgb(32, 5, 5);
+    font-size: 2.0rem;
+    max-width: 80%;
+    margin: 10px auto;
+    background-color: transparent;
+}
+
+.h-primary {
+    font-size: 3rem;
+    padding-top: 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+.h-secondary {
+    font-size: 2rem;
+    padding-top: 2px;
+    background-color: rgb(149, 183, 172);
+}
+
+/* Service Container Styling */
+.services-cont1, .services-cont2, .services-cont3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Common Box Styling */
+#services1 .box1,
+#services2 .box2,
+#services3 .box3,
+#funfact .box3 {
+    border: 2px solid rgb(7, 84, 34);
+    background-color: rgb(149, 183, 172);
+    height: 300px;
+    color: white;
+    padding: 20px;
+    flex: 1 1 45%; /* Ensures containers stay side by side on larger screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+/* Image Styling for Containers */
+#services1 .box1 img,
+#services2 .box2 img,
+#services3 .box3 img,
+#funfact .box3 img {
+    height: 100px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+/* Text Centering */
+.text-center {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 20px;
+    color: aliceblue;
+}
+
+/* Button Styling */
+.btn, .btn1, .btn2, .btn3 {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(12, 107, 75);
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover, .btn1:hover, .btn2:hover, .btn3:hover {
+    background-color: rgb(10, 85, 60);
+}
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Sections Container */
+.sections-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    background: url("https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg") no-repeat center center/cover;
+    padding: 50px;
+    color: hwb(0 90% 0%);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+footer li {
+    padding-bottom: 10px;
+    list-style-type: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 70px;
+        margin: 10px;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #navbar ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    #home h3 {
+        font-size: 1.5rem;
+    }
+
+    .btn, .btn1, .btn2 {
+        font-size: 1.2rem;
+        padding: 5px 15px;
+    }
+
+    .h-primary {
+        font-size: 2rem;
+    }
+
+    .services-cont1, .services-cont2, .services-cont3 {
+        flex-direction: column;
+    }
+
+    #services1 .box1,
+    #services2 .box2,
+    #services3 .box3,
+    #funfact .box3 {
+        min-width: 100%; /* Full width on smaller screens */
+        height: auto;
+        padding: 15px;
+    }
+
+    #services1 .box1 img,
+    #services2 .box2 img,
+    #services3 .box3 img,
+    #funfact .box3 img {
+        height: 80px;
+        width: 80px;
+    }
+
+    footer {
+        font-size: 1.2rem;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .h-primary {
+        font-size: 1.8rem;
+    }
+
+    .h-secondary {
+        font-size: 1.5rem;
+    }
+
+    .btn, .btn1, .btn2 {
+        font-size: 1rem;
+    }
+
+    #home h3 {
+        font-size: 1.2rem;
+    }
+}

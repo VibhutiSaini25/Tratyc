@@ -1,0 +1,78 @@
+/* Floating animation for trending-item containers from edge to edge */
+@keyframes horizontalFloat {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Fading background animation for the container wallpaper only */
+@keyframes backgroundFade {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/* Container with animated background */
+.trending-container {
+  background-image: url("https://i.pinimg.com/736x/48/05/91/4805912f9c30c6c7bfccce6e410e10de.jpg");
+  background-size: cover;
+  background-position: center;
+  animation: backgroundFade 10s ease-in-out infinite;
+  padding: 20px;
+  max-width: 1400px;
+  max-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden; /* To ensure floating animation stays within container */
+  position: relative;
+}
+
+/* Trending title */
+.trending-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grid layout for trending items */
+.trending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  animation: horizontalFloat 8s ease-in-out infinite; /* Apply edge-to-edge movement */
+}
+
+/* Trending item styling */
+.trending-item {
+  background-color: rgba(248, 248, 248, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for trending items */
+.trending-item:hover {
+  transform: scale(1.05);
+}
+
+/* Image within each trending item */
+.trending-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}

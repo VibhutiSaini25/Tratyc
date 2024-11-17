@@ -1,0 +1,209 @@
+/* Ensure modal overlay covers the entire screen */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideUpModal 0.1s ease-out forwards;
+}
+
+/* Modal content styling */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh; /* Limits the modal height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    position: relative;
+    animation: slideUpContent 0.1s ease-out forwards;
+}
+
+/* Styling for the recipe content */
+.recipe-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.recipe-category {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.recipe-instruct,
+.recipe-meal-img,
+.recipe-link {
+    margin-bottom: 20px;
+}
+
+.recipe-meal-img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.recipe-link a {
+    color: hsl(34, 67%, 49%);
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background: #555;
+}
+
+.h2{
+    margin-top: 20px;
+    border-radius: 0.5rem;
+    margin-left: 40%;
+    color: rgb(5, 36, 36);
+    max-width: 20%;
+    height: 10vh;
+    text-align: center;
+}
+.p{
+    
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-top: 40px;
+   color: hsl(0, 62%, 52%);
+    text-align: center;
+}
+body{
+    background-image: url("https://files.oaiusercontent.com/file-Y0yTwoCWdoTfT16jduHdhlM8?se=2024-11-08T13%3A50%3A25Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D0a6d4111-a28c-4921-abaf-2a26fe3f7e6a.webp&sig=UQFabtgnDKw9/G/%2B5jedkVZ/yv4WylC/fHsPbUgruu4%3D");
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
+.btn{
+    text-decoration: none;
+    color: hsl(0, 62%, 52%);
+    background: var(--tenne-tawny);
+    background-color: #a0ccbd;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+    display: block;
+    width: 175px;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+@keyframes slideUpModal {
+    from {
+        bottom: -100%; /* Start position below the screen */
+    }
+    to {
+        bottom: 0; /* End position at the bottom of the screen */
+    }
+}
+
+@keyframes slideUpContent {
+    from {
+        transform: translateY(50px); /* Start content position below */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1; /* End position with normal opacity */
+    }
+}
+
+.rand-recipe-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-out; /* Fade-in animation for the container */
+}
+
+/* Navbar */
+#navbar {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(116, 86, 86);
+    padding: 10px 20px;
+    transition: background-color 0.3s ease; /* Smooth background-color transition */
+}
+
+#navbar:hover {
+    background-color: hsl(0, 38%, 69%); /* Change color on hover */
+}
+
+
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#navbar ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+#navbar ul li a:hover {
+    color: #f0f0f0; /* Change color on hover */
+    text-decoration: underline;
+}
+/* Logo initial state */
+#navbar #logo .logo {
+    width: 80px;
+    height: 80px;
+    animation: slideLogo 2s ease-in-out forwards; /* Apply the sliding animation */
+}
+
+/* Hover effect for logo (optional) */
+#navbar #logo:hover .logo {
+    transform: scale(1.1); /* Logo enlarges on hover */
+}
+
+/* Keyframes for sliding the logo */
+@keyframes slideLogo {
+    0% {
+        transform: translateX(0); /* Start at the original position */
+    }
+    50% {
+        transform: translateX(300px); /* Move to the right */
+    }
+    100% {
+        transform: translateX(5); /* Slide back to the original position */
+    }
+}

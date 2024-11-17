@@ -1,0 +1,129 @@
+/* FunFacts.css */
+
+.fun-facts-page {
+    background-image: url("/Capstone/NewTratyc/tratyc/public/ff.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4; /* Optional background color */
+    padding: 20px;
+}
+.logo{
+    padding: 5px;
+    width: 70px;
+    background-color: #eeb96a ;
+    border-radius:100%;
+    
+   
+    
+}
+.fun-facts-nav {
+    margin-top:2%;
+    width: 100%;
+    align-items: center;
+    height: 14vh;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px ;
+    background-color:#eeb96a /* Dark background for the nav */
+}
+
+.home-btn {
+    background-color: hsl(309, 76%, 66%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.home-btn:hover {
+    background-color: hsl(225, 73%, 62%); /* Slightly darker on hover */
+}
+
+.fun-facts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+   
+    border-radius: 10px;
+    background-image: linear-gradient(#f8e453,hsl(99, 79%, 70%),hsl(240, 36%, 74%),hwb(347 24% 5%));
+    margin-top: 80px;
+    width: 50%;
+    max-width: 600px;
+}
+
+.generate-fact-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.generate-fact-btn:hover {
+    background-color: #0056b3;
+}
+
+.fun-fact {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: hsl(267, 71%, 57%);
+    line-height: 1.5;
+}
+
+.fun-facts-container {
+   
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Takes full viewport height */
+    background-color: #f9f9f9;
+    padding: 20px;
+    
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.fun-facts-box {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.fun-fact {
+    font-size: 1.25rem;
+    color: rgb(189, 27, 127);
+    margin-bottom: 20px;
+}
+
+.generate-fact-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.generate-fact-button:hover {
+    background-color: hsl(210, 19%, 90%);
+    color: #007bff;
+}
